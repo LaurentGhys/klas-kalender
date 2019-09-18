@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Login/Register</title>
+        <meta name="description" content="Login or create a new account">
+        <link rel="stylesheet" href="login.css">
+    </head>
+    <body>
+        <h1>Login</h1>
+        <form>
+            <input id="loginEmailTextField" type="email" placeholder="Email">
+            <input id="loginPasswordTextField" type="password" placeholder="Password">
+            <input id="loginButton" type="submit" value="Login">
+        </form>
+        <h1>Register</h1>
+        <form>
+            <input type="text" placeholder="First Name">
+            <input type="text" placeholder="Last Name">
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <input type="password" placeholder="Confirm Password">
+            <input type="submit" value="Register">
+        </form>
+
+        <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-firestore.js"></script>
+
+        <script src="main.js"></script>
+        <script src="login.js"></script>
+    </body>
+</html>
