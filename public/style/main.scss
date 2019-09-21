@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&display=swap');
+
+$green: #2ecc71;
+$greenDark: #27ae60;
+$blue: #3498db;
+$blueDark: #2980b9;
+$turquoise: #1abc9c;
+$turquoiseDark: #16a085;
+$gray: #34495e;
+$grayDark: #2c3e50;
+$lightgray: #95a5a6;
+$lightgrayDark: #7f8c8d;
+$white: #ecf0f1;
+$whiteDark: #bdc3c7;
+$red: #e74c3c;
+$redDark: #c0392b;
+$orange: #e67e22;
+$orangeDark: #d35400;
+$yellow: #f1c40f;
+$yellowDark: #f39c12;
+$purple: #9b59b6;
+$purpleDark: #8e44ad;
+
+@mixin absoluteCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

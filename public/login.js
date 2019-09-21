@@ -1,14 +1,3 @@
-const firebaseConfig = {
-    apiKey: "AIzaSyBeVO6L9NOm_Q1oBSwu5Lv8UvtbnvZEJlM",
-    authDomain: "klas-kalend.firebaseapp.com",
-    databaseURL: "https://klas-kalend.firebaseio.com",
-    projectId: "klas-kalend",
-    storageBucket: "klas-kalend.appspot.com",
-    messagingSenderId: "810220527567",
-    appId: "1:810220527567:web:9b1167dba05659dec2bcba"
-};
-firebase.initializeApp(firebaseConfig);
-
 //Login HTML Objects
 var loginEmailTextField = document.getElementById("loginEmailTextField");
 var loginPasswordTextField = document.getElementById("loginPasswordTextField");
@@ -43,7 +32,6 @@ function Login(email, password) {
         alert(error.message);
     })
 }
-
 function Register(firstName, lastName, email, password) {
     firebase.auth().createUserWithEmailAndPassword(email, password).then(function() {
         firebase.firestore().collection("Users").doc(email).set({
@@ -59,7 +47,6 @@ function Register(firstName, lastName, email, password) {
         alert(error.message);
     })
 }
-
 function Logout() {
     firebase.auth().signOut().then(function() {
         // Sign-out successful.
@@ -67,3 +54,9 @@ function Logout() {
         // An error happened.
     });
 }
+
+firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+        window.location.href = homeURL;
+    }
+});

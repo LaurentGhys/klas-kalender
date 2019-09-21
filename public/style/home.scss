@@ -1,0 +1,57 @@
+@import "main.scss";
+
+$borderRadius: 10px;
+$width: 200px;
+$padding: 15px;
+@mixin text {
+  font-weight: normal;
+  font-size: 16px;
+  font-family: "Nunito", sans-serif;
+}
+
+*:focus {
+  outline: 0;
+}
+
+body {
+  background: $gray;
+  #container {
+    @include absoluteCenter;
+    background-color: $grayDark;
+    width: auto;
+    padding: 50px;
+    border-radius: $borderRadius;
+    text-align: center;
+    :not(:last-child) {
+      margin-bottom: 10px;
+    }
+    button {
+      @include text;
+      width: $width;
+      padding: $padding;
+      border: none;
+      border-radius: $borderRadius;
+      color: white;
+    }
+    #joinClassButton {
+      background-color: $blue;
+    }
+    #createClassButton {
+      background-color: $green;
+    }
+    input {
+      @include text;
+      width: ($width - $padding * 2);
+      padding: $padding;
+      border-radius: $borderRadius;
+      border: none;
+      color: $gray;
+    }
+    p {
+      @include text;
+      color: $lightgray;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+  }
+}
